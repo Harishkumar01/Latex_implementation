@@ -1,2 +1,0 @@
-# Latex_implementation
-Editor

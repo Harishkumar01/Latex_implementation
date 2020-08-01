@@ -1,18 +1,12 @@
-\ProvidesClass{twentysecondcv}[2015/02/28 CV class]
+\ProvidesClass{Baseclass}
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}
 
-%----------------------------------------------------------------------------------------
-%	 REQUIRED PACKAGES
-%-----------------------------------------------------------------------	-----------------
+%importing required packages.
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[sfdefault]{ClearSans}
-
-\def\arrow#1{\pspicture[shift=2pt](#1,0)\psline{->}(#1,0)\endpspicture}
-
 \usepackage{pstricks}
-
 \usepackage{fontawesome}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -24,37 +18,29 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
-
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
-
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
     pdftitle={},
     pdfauthor={},
     pdfsubject={},
     pdfkeywords={},
-    colorlinks=false,           % no lik border color
-    allbordercolors=white       % white border color for all
+    colorlinks=false,          
+    allbordercolors=white       
 }
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
-%----------------------------------------------------------------------------------------
-%	 DEFINING COLOURS
-%----------------------------------------------------------------------------------------
+% defining colors used in resume
 
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{mainblue}{HTML}{0E5484}
-%\definecolor{maingray}{HTML}{B9B9B9}
 \definecolor{mainpurple}{HTML}{884EA0}
 \definecolor{maingray}{HTML}{85929E}
-
 \definecolor{pblue}{HTML}{0395DE}
-
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
@@ -94,22 +80,13 @@
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
 
+\pagestyle{empty} 
+\setlength{\parindent}{0pt}
 
-\pagestyle{empty} % Disable headers and footers
-
-\setlength{\parindent}{0pt} % Disable paragraph indentation
-
-% --------------------------------------------------------------------------------------
-% 	FONTS
-%-------------------------------------------------------------------------------------
 \newfontfamily\headingfont[Path = ]{segoeuib.ttf}
 
-%----------------------------------------------------------------------------------------
-%	 SIDEBAR DEFINITIONS
-%----------------------------------------------------------------------------------------
-
-\setlength{\TPHorizModule}{1cm} % Left margin
-\setlength{\TPVertModule}{1cm} % Top margin
+\setlength{\TPHorizModule}{1cm} 
+\setlength{\TPVertModule}{1cm} 
 
 \newlength\imagewidth
 \newlength\imagescale
@@ -118,28 +95,24 @@
 
 \newcommand{\profilesection}[2]{\vspace{8pt}{\color{headercolor} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
-% Define custom commands for CV info
+% defining our own commands for resume informations.
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
-\newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
-%New------------------------------------------------
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
-%New------------------------------------------------
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
-%New Surname
 \newcommand{\cvsurname}[1]{\renewcommand{\cvsurname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
 
 
-% Command for printing the contact information icons
+% Command for contact information icons
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainpurple,mainpurple,text=white] (char) {#1};}}
 
-% Command for printing skill progress bars
+% Command for progress bars
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
@@ -152,8 +125,9 @@
 	}
 }
 
-\newcommand\programminglanguage[1]{ 
-	\renewcommand{\programminglanguage}{
+% Command for programming Language
+\newcommand\speakinglanguage[1]{ 
+	\renewcommand{\speakinglanguage}{
 		\begin{tikzpicture}
 		\foreach [count=\i] \x/\y in {#1}{
 			\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
@@ -164,32 +138,17 @@
 	}
 }
 
-%\newcommand\languages[1]{ 
-%	\renewcommand{\languages}{
-%		{#1}
-%	}
-%}
-
-%----------------------------------------------------------------------------------------
-%  SIDEBAR LAYOUT
-%----------------------------------------------------------------------------------------
-
 \newcommand{\makeprofile}{
 	\begin{tikzpicture}[remember picture,overlay]
 	\node [rectangle, fill=sidecolor, anchor=north, minimum width=9.1cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
 	\end{tikzpicture}
 	
-	%------------------------------------------------
-	
 	\begin{textblock}{6}(0.55, 0.2)
-		%Yeni------------------------------------------------
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 		\clip (600/2, 567/2) circle (567/2);
 		
 		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
 		\end{tikzpicture}
-		%Yeni------------------------------------------------
-		%------------------------------------------------
 		
 		\vspace{2mm}
 		{\Huge\color{mainpurple}\hspace{5mm}\cvname}
@@ -198,11 +157,9 @@
 		
 		\vspace{1mm}
 		
-		%------------------------------------------------
 		
 		{\Large\color{headercolor}\hspace{0.1mm}\cvjobtitle}
-		
-		%------------------------------------------------
+
 		
 		\vspace{4mm}
 		\renewcommand{\arraystretch}{2}
@@ -214,15 +171,6 @@
               \end{array}
               $} 
             & \cvnumberphone\\}
-            
-      \ifthenelse{\equal{\cvsite}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{-2.5mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
-              \end{array}
-              $}
-            & \cvsite\\}
-            %& \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -247,13 +195,10 @@
 		}   
     \end{tabular}
 
-    %------------------------------------------------
     \vspace{0.5mm}
     \profilesection{\color{headercolor}Interests}{0.0cm}
 
-	\yetenek
-        
-        %------------------------------------------------
+	\stylz
         
         \vspace{3mm}
        
@@ -265,21 +210,11 @@
 		 
 	 {\large \textbf{\color{headercolor}Languages}}
 	 
-	  	\programminglanguage
-         
-        
-        %\profilesection{Languages}{0.0cm} 
-        
-        %\languages
+	  	\speakinglanguage
+
   \end{textblock}
 }
 
-
-%----------------------------------------------------------------------------------------
-%	 COLOURED SECTION TITLE BOX
-%----------------------------------------------------------------------------------------
-
-% Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
 	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 }
@@ -312,13 +247,13 @@
 \setlength{\tabcolsep}{0pt}
 
 % New environment for the long list
-\newenvironment{twenty}{%
+\newenvironment{envvar}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
 	\end{tabular*}
 }
 
-\newcommand{\twentyitem}[6]{%
+\newcommand{\envvaritem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#3}% 
 		\hfill%
@@ -333,13 +268,13 @@
 \setlength{\tabcolsep}{0pt}
 
 % New environment for the small list
-\newenvironment{twentyshort}{%
+\newenvironment{envvarshort}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
 	\end{tabular*}
 }
 
-\newcommand{\twentyitemshort}[2]{%
+\newcommand{\envvaritemshort}[2]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		#2%
 	}\\
@@ -353,21 +288,13 @@
 \smartdiagramset{
     bubble center node font = \footnotesize,
     bubble node font = \footnotesize,
-    % specifies the minimum size of the bubble center node
     bubble center node size = 0.5cm,
-    %  specifies the minimum size of the bubbles
     bubble node size = 0.5cm,
-    % specifies which is the distance among the bubble center node and the other bubbles
     distance center/other bubbles = 0.3cm,
-    % sets the distance from the text to the border of the bubble center node
     distance text center bubble = 0.5cm,
-    % set center bubble color
     bubble center node color = pblue,
-    % define the list of colors usable in the diagram
     set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
-    % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.6,
-    % sets the opacity at which the bubble text is shown
     bubble text opacity = 1,
 }
 
