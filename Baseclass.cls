@@ -118,7 +118,7 @@
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainpurple](0,\i) rectangle (\y,\i+0.4);
+				\draw[fill=white,blue](0,\i) rectangle (\y,\i+0.4);
 				\node [above right] at (0,\i+0.35) {\x};
 			}
 		\end{tikzpicture}
@@ -221,7 +221,7 @@
 
 \def\@sectioncolor#1#2#3{%
 	{%
-		\color{mainpurple} #1#2#3%
+		\color{blue} #1#2#3%
 	}%
 }
 

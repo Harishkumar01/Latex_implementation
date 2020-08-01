@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.27)  1 AUG 2020 15:02
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.27)  1 AUG 2020 15:08
  restricted system commands enabled.
-**harish.tex
-(./harish.tex
+**madhu.tex
+(./madhu.tex
 LaTeX2e <2020-02-02> patch level 5
 Lua module: luaotfload-main 2020-05-06 3.14 luaotfload entry point
 Lua module: luaotfload-init 2020-05-06 3.14 luaotfload submodule / initializatio
@@ -951,9 +951,10 @@ ramlibrarycore.definitions.code.tex)
 (C:/Users/Harish/AppData/Local/Programs/MiKTeX/tex/latex/smartdiagram/smartdiag
 ramlibrarycore.styles.code.tex)
 (C:/Users/Harish/AppData/Local/Programs/MiKTeX/tex/latex/smartdiagram/smartdiag
-ramlibrarycore.commands.code.tex))) (./harish.aux)
-\openout1 = harish.aux
+ramlibrarycore.commands.code.tex)))
+No file madhu.aux.
 
+\openout1 = madhu.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
@@ -965,7 +966,6 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 31
 .
-
 (C:/Users/Harish/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1077,10 +1077,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
- (./harish.out) (./harish.out)
 \@outlinefile=\write4
 
-\openout4 = harish.out
+\openout4 = madhu.out
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1116,11 +1115,11 @@ LaTeX Info: Redefining \nameref on input line 31.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Harish.jpg, id=33, 3035.34pt x 4047.12pt>
-File: Harish.jpg Graphic file (type jpg)
-<use Harish.jpg>
-Package luatex.def Info: Harish.jpg  used on input line 33.
-(luatex.def)             Requested size: 142.26378pt x 189.64653pt.
+<madhu.jpeg, id=33, 963.6pt x 1284.8pt>
+File: madhu.jpeg Graphic file (type jpg)
+<use madhu.jpeg>
+Package luatex.def Info: madhu.jpeg  used on input line 33.
+(luatex.def)             Requested size: 142.26378pt x 189.67299pt.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
 (Font)              scaled to size 24.88pt on input line 33.
 
@@ -1250,35 +1249,45 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{C:/Users/Harish/AppData/Local/MiKTeX/pdftex/config/pdft
-ex.map}<./Harish.jpg>]
+ex.map}<./madhu.jpeg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
- (./harish.aux)
+ (./madhu.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
-Package rerunfilecheck Info: File `harish.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `madhu.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `madhu.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 28452 strings out of 481315
+ 28437 strings out of 481315
  100000,953878 words of node,token memory allocated
  1509 words of node memory still in use:
    32 hlist, 1 vlist, 10 rule, 18 glue, 3 kern, 1 glyph, 97 attribute, 65 glue_s
 pec, 97 attribute_list, 2 write, 39 pdf_literal, 18 pdf_colorstack nodes
-   avail lists: 1:1,2:2121,3:517,4:79,5:190,6:55,7:2466,8:9,9:483,10:2,11:138
+   avail lists: 1:1,2:2119,3:515,4:79,5:194,6:54,7:2328,8:8,9:482,10:2,11:116
  44654 multiletter control sequences out of 65536+200000
  71 fonts using 11558155 bytes
- 68i,17n,84p,795b,861s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,17n,84p,794b,861s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/harish/appdata/local/programs/miktex/fonts/opentype/public/lm/lmro
 man10-regular.otf><C:/Users/Harish/AppData/Local/Programs/MiKTeX/fonts/opentype/
 public/fontawesome/fontawesome.otf><C:/Users/Harish/AppData/Local/Programs/MiKTe
 X/fonts/truetype/intel/clearsans/ClearSans-Bold.ttf><C:/Users/Harish/AppData/Loc
 al/Programs/MiKTeX/fonts/truetype/intel/clearsans/ClearSans-Regular.ttf><//?/c:/
 windows/fonts/segoeuib.ttf>
-Output written on harish.pdf (1 page, 1278401 bytes).
+Output written on madhu.pdf (1 page, 144507 bytes).
 
-PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 83 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 131072)
  196 words of extra memory for PDF output out of 10000 (max. 100000000)
 
