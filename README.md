@@ -1,2 +1,2 @@
 # Latex_implementation
-Editor
+Resume Generator
